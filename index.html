@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Asistente digital</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/index.css" />
+    
+</head>
+<body>
+    <h1 >Asistente virtual</h1>
+    <p id="fecha"></p>
+    <script src="js/index.js"></script>
+
+    <div class="alerta">
+        <span class="boton" onclick="this.parentElement.style.display='none';">&times;</span> 
+        <strong>Notificacion!</strong> No hay eventos proximos.
+      </div>
+<br>
+      <div class="alerta">
+        <span class="boton" onclick="this.parentElement.style.display='none';">&times;</span> 
+        <strong>Notificacion!</strong> Ho hay gastos el dia de hoy.
+      </div>
+      
+<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Agendar</button>
+
+<div id="id01" class="modal">
+  
+  <form class="modal-content animate" action="/action_page.php">
+    <div class="imgcontainer">
+        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+        <!--Empesar calendario aqui-->
+        <h1>Hola mundo</h1>
+
+      </div>
+  </form>
+</div>
+<script src="js/calendario.js"></script>
+
+<button onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Registrar gastos</button>
+<div id="id02" class="modal">
+  <form class="modal-content animate" action="/action_page.php">
+    <div class="imgcontainer">
+        <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+        <!--Empesar Gastos aqui-->
+        <h1>Hola</h1>
+
+      </div>
+  </form>
+</div>
+<script src="js/gastos.js"></script>
+
+</body>
+</html>
