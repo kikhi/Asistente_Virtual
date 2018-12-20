@@ -12,7 +12,6 @@
     <h1 >Asistente virtual</h1>
     <p id="fecha"></p>
     <script src="js/index.js"></script>
-
     <div class="alerta">
         <span class="boton" onclick="this.parentElement.style.display='none';">&times;</span> 
         <strong>Notificacion!</strong> No hay eventos proximos.
@@ -31,7 +30,108 @@
     <div class="imgcontainer">
         <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
         <!--Empesar calendario aqui-->
-        <h1>Hola mundo</h1>
+        <div class="container">
+  <form action="/action_page.php">
+    <div class="row">
+      <div class="col-25">
+        <label for="fname">Nombre del evento</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="fname" name="firstname" placeholder="Evento ..">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="lname">Lugar</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="lname" name="lastname" placeholder="Lugar ..">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="country">Fecha</label>
+      </div>
+      <div class="col-75">
+        <select id="country" name="country">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+          <option value="12">12</option>
+          <option value="13">13</option>
+          <option value="14">14</option>
+          <option value="15">15</option>
+          <option value="16">16</option>
+          <option value="17">17</option>
+          <option value="18">18</option>
+          <option value="19">19</option>
+          <option value="20">20</option>
+          <option value="21">21</option>
+          <option value="22">22</option>
+          <option value="23">23</option>
+          <option value="24">24</option>
+          <option value="25">25</option>
+          <option value="26">26</option>
+          <option value="27">27</option>
+          <option value="28">28</option>
+          <option value="29">29</option>
+          <option value="30">30</option>
+          <option value="31">31</option>
+          <option value="32">32</option>
+        </select>
+      </div>
+      <div class="col-75">
+        <select id="country" name="country">
+          <option value="0">Enero</option>
+          <option value="1">febrero</option>
+          <option value="2">Marzo</option>
+          <option value="3">Abril</option>
+          <option value="4">Mayo</option>
+          <option value="5">Junio</option>
+          <option value="6">Julio</option>
+          <option value="7">Agosto</option>
+          <option value="8">Septiembre</option>
+          <option value="9">Octubre</option>
+          <option value="10">Noviembre</option>
+          <option value="11">Diciembre</option>
+        </select>
+      </div>
+      <div class="col-75">
+        <select id="country" name="country">
+          <option value="2018">2018</option>
+          <option value="2019">2019</option>
+          <option value="2020">2020</option>
+          <option value="2021">2021</option>
+          <option value="2022">2022</option>
+          <option value="2023">2023</option>
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="subject">Descripcion</label>
+      </div>
+      <div class="col-75">
+        <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+      </div>
+    </div>
+    <div class="row">
+      <span style="text-align: center;" onclick="notifyMe()" class="agregar_g">Add</span>
+      <p> Importante si-no</p>
+        <label class="switch">
+          <input type="checkbox">
+          <span class="slider"></span>
+        </label>
+    </div>
+  </form>
+</div>
 
       </div>
   </form>
@@ -43,8 +143,16 @@
   <form class="modal-content animate" action="/action_page.php">
     <div class="imgcontainer">
         <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
-        <!--Empesar Gastos aqui-->
-        <h1>Hola</h1>
+        <!--Gastos-->
+        <div id="g_total" class="portada_g">
+          <h2 style="margin:5px">Control de gastos</h2>
+          <input type="text" id="myInput" placeholder="Title...">
+          <span onclick="newElement()" class="agregar_g">Add</span>
+        </div>
+        
+        <ul id="myUL">
+        </ul>
+        <script src="js/gastos.js"></script>
 
       </div>
   </form>
